@@ -5,47 +5,33 @@ To implement the inference Burglary P(B| j,⥗m) in alarm problem by using Varia
 
 ## Algorithm:
 
-Step 1:
+## Step 1:
+Define the Bayesian Network structure for alarm problem with 5 random variables, Burglary,Earthquake,John Call,Mary Call and Alarm.<br>
 
- Define the Bayesian Network structure for alarm problem with 5 random 
-             variables, Burglary,Earthquake,John Call,Mary Call and Alarm.<br>
+## Step 2: 
+Define the Conditional Probability Distributions (CPDs) for each variable using the TabularCPD class from the pgmpy library.<br>
 
+## Step 3:
+Add the CPDs to the network.<br>
 
-Step 2: 
+## Step 4:
+ Initialize the inference engine using the VariableElimination class from the pgmpy library.<br>
+ 
+## Step 5:
+Define the evidence (observed variables) and query variables.<br>
 
- Define the Conditional Probability Distributions (CPDs) for each variable 
-            using the TabularCPD class from the pgmpy library.<br>
+## Step 6:
+Perform exact inference using the defined evidence and query variables.<br>
 
-
-Step 3:
-
- Add the CPDs to the network.<br>
-
-
-Step 4:
-
- Initialize the inference engine using the VariableElimination class from 
-             the pgmpy library.<br>
-
-
-Step 5:
-
- Define the evidence (observed variables) and query variables.<br>
-
-Step 6:
-
- Perform exact inference using the defined evidence and query variables.<br>
-
-Step 7:
-
- Print the results.<br>
+## Step 7: 
+Print the results.<br>
 
 ## Program :
 ```
-Name:Kadin Samson L
-
-Reg.No:212221230044
+Name: Yuvadarshini S
+Reg.No:212221230126
 ```
+
 ```py
 from pgmpy.models import BayesianNetwork
 from pgmpy.factors.discrete import TabularCPD
@@ -66,9 +52,8 @@ result=inference.query(variables=[query_variable],evidence=evidence)
 print(result)
 ``````
 
-
 ## Output :
-![oyut](1.png)
+<img width="310" alt="1" src="https://github.com/Yuvadarshini-Sathiyamoorthy/Ex-No.-3--Implementation-of-Exact-Inference-Method-of-Bayesian-Network/assets/93482485/fd70d5ee-fd6f-448b-ad4f-2a48df45db7d">
 
 ## Result :  
 Hence the implementation of Exact Inference Method of Bayesian Network Is implemented Successfully.
